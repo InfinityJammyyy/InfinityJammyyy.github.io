@@ -1,3 +1,1 @@
-Test Main Site
-Go to InfinityJammyyy.github.io/index.html for 
-main site
+If your directly reading the README.md Hello! otherwise the site is resetting it will be up in a bit sorry for the delay.
