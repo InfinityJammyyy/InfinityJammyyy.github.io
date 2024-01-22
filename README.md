@@ -1,5 +1,2 @@
 # InfinityJammyyy.github.io
-My Website Thingy
-
-
-hoi
+# My Website Thingy
