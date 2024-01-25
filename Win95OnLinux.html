@@ -69,7 +69,9 @@
     <p>sudo apt install &lt;Package goes here&gt; </p>
     <p>to install all the applications listed above </p>
     <p>7.) Configure the wine compatibility layer if you did not install wine
-      skip to step 8 anyway simply run winecfg once it is finished simply hit Ok
+      skip to step 8 anyway open a terminal and run</p>
+      <p>sudo dpkg --add-architecture i386</p> 
+      <p>this enables the 32 bit architecture required for running Windows 95/98 applications now run winecfg once it is finished simply hit Ok
       no additional configuration is required</p>
     <p>8.) Open the terminal and type:</p>
     <p>git clone https://github.com/grassmunk/Chicago95</p>
