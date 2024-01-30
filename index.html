@@ -7,7 +7,39 @@
     <title>InfinityJammyyy</title>
   </head>
   <body style="       max-width: 8.5in; margin: 0.7874in; background-color: teal; width: 1134px; height: 610px;"
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <style>
+        body {
+            font-family: 'VT323', monospace;
+            font-size: 2em;
+            text-align: center;
+            margin: 20% auto;
+        }
+    </style>
+    <script>
+        function updateClock() {
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
 
+            var timeString = `${hours}:${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        function startClock() {
+            updateClock(); // Initial call
+            setInterval(updateClock, 1000); // Update every second
+        }
+
+        window.onload = startClock;
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>
     dir="ltr">
     <h1 style="width: 1000px;"><b>Hello, Hi, Welcome to my website a Jamm filled
         production</b></h1>
