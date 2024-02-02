@@ -10,6 +10,30 @@
     dir="ltr">
     <h1 style="width: 1000px;"><b>Hello, Hi, Welcome to my website a Jamm filled
         production</b></h1>
+
+    <!-- The Clock that will probably break the entire website :( -->
+    
+    <div id="clock"></div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script>
+
+    <!-- End Clock -->
+    
     <h2 style="width: 1000px; margin-top: -19.0833px;"><br>
     </h2>
     <h2 style="width: 1000px; margin-top: -19.0833px;">Windows 95 but ON LINUX!
