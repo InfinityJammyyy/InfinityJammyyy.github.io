@@ -9,6 +9,29 @@
     dir="ltr">
     <h1 style="width: 1030px;">Windows 95 on Linux with Chicago95, Wine32, and
       Solitaire 98.</h1>
+    
+        <!-- The Clock that will probably break the entire website :( -->
+    
+    <div id="clock"></div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script>
+
+    <!-- End Clock -->
     <p style="width: 1000px;">With Chicago95 you can install a windows95 like
       theme on XUbuntu this does work with other Distros but I have found that
       XUbuntu coming pre-packaged with the XFCE desktop environment is the works
