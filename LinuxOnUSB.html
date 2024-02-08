@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>LinuxOnUSB</title>
+  </head>
+  <body style="    max-width: 8.5in; margin: 0.7874in; background-color: teal; width: 1000px; height: 610px;"
+    dir="ltr">
+    <h1 style=" width: 1000px;">Linux on a USB stick with MKUsb.</h1>
+    <!-- The Clock that will probably break the entire website :( -->
+    <div id="clock"></div>
+    <script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script> <!-- End Clock -->
+    <p>Using MKUsb you can grab a Ubuntu OS or Debian OS and install it on an
+      external Usb/SSD drive this only works with the two OS's however I have
+      not tried spinoffs like Devuan which is Debian without Systemd it probably
+      will be fine but I have not tried it so I cannot say. To use MKUsb you
+      must be on a debian or ubuntu system to install the utilty.</p>
+    <p>Pre-Guide</p>
+    <p>Now lets get into it I recommend having at least a 16 gig USB stick
+      however i would choose something closer to 32 gig's you need to be
+      familiar with nano or vim or some kind of text editor and you need Debian
+      or Ubuntu on your system this guide will follow Debian so you will need to
+      add a repository to sources.list</p>
+    <p>Now lets start.</p>
+    <p>1.) The sources.list file is in the /etc/apt folder so cd into that (cd
+      /etc/apt) next because it is write protected you will need to use sudo or
+      be root with sudo -i or su then use your text editor (nano sources.list)
+      then add this line which adds the repository</p>
+    <pre><span class="anchor" id="line-1-3"></span>deb http://ppa.launchpad.net/mkusb/ppa/ubuntu focal main  # stable version, tested and reliable</pre>
+    <p>Then run:</p>
+    <pre><span class="anchor" id="line-1-5"></span>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 54B8C8AC</pre>
+    <p>This adds the gpg key to the server then run sudo apt update to see if it
+      works if you get an error saying the gpg key is invalid you can download
+      MKUsb directly here</p>
+    <p>https://phillw.net/isos/linux-tools/mkusb/</p>
+    <p>Download the <a href="https://phillw.net/isos/linux-tools/mkusb/mkusb-plug-plus-tools.tar.gz">mkusb-plug-plus-tools.tar.gz</a>
+      file or click the file name on this site. cd into your downloads directory
+      and cd into the /mkusb-plug-plus-tools then cd into /plug-dir then run:</p>
+    <p>sudo ./installer i</p>
+    <p>this will install it on your Debian system.</p>
+    <p>-- Put rest of article here --</p>
+    <p>
+    </p>
+    <p><br>
+    </p>
+    <p></p>
+    <h1> </h1>
+    <p></p>
+  </body>
+</html>
