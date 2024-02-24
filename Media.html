@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Random Media</title>
+  </head>
+  <body style="    max-width: 8.5in; margin: 0.7874in; background-color: teal; width: 1134px; height: 610px;"
+    dir="ltr">
+    <h1 style="width: 1030px;">Random Media</h1>
+    <!-- The Clock that will probably break the entire website :( -->
+    <div id="clock"></div>
+    <script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const timeString = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('clock').textContent = timeString;
+}
 
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial call to display the clock immediately
+updateClock();
+</script> <!-- End Clock -->
+
+    <video width="640" height="360" controls>
+      <source src="EXOpool.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </body>
+</html>
